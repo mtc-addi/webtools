@@ -1,0 +1,3410 @@
+<?xml version="1.0"?>
+<questestinterop>
+  <assessment title="Drawings" ident="A1001">
+    <section title="Main" ident="S1002">
+      <item title="Question 1" ident="QUE_1004">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which of the following terms is/are used to indicate specific measured distances from the datum and/or other points identified by the manufacturer, to points in or on the aircraft?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1005_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1006_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Zone and station numbers.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1007_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Station numbers.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1008_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Reference numbers.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1005_RL">QUE_1006_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1003_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1005_RL">QUE_1007_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1003_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1005_RL">QUE_1008_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1003_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1003_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Station numbers is a numbering system used on large assemblies for aircraft to locate stations such as fuselage frames. Fuselage Frame-Sta 185 indicates the frame is 185 inches from the datum of the aircraft. The measurement is usually taken from the nose or zero station, but in some instances it may be taken from the firewall or some other point chosen by the manufacturer.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 2" ident="QUE_1010">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Working drawings may be divided into three classes. They are:]]></mattext>
+          </material>
+          <response_lid ident="QUE_1011_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1012_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[title drawings, installation drawings, and assembly drawings.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1013_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[detail drawings, assembly drawings, and installation drawings.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1014_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[detail drawings, orthographic projection drawings, and pictorial drawings.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1011_RL">QUE_1012_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1009_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1011_RL">QUE_1013_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1009_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1011_RL">QUE_1014_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1009_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1009_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The three classes of working drawings are: detail drawings, assembly drawings, and installation drawings.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 3" ident="QUE_1016">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 33.) Which material section-line symbol indicates cast iron?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1017_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1018_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1019_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1020_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1017_RL">QUE_1018_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1015_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1017_RL">QUE_1019_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1015_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1017_RL">QUE_1020_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1015_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1015_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Section lines shown in 3 are for cast iron. Section lines shown in 1 are for rubber, plastic, or electrical insulation. Section lines shown in 2 are for steel.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 4" ident="QUE_1022">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[When reading a blueprint, a dimension is given as 4.387 inches +.005 -.002. Which statement is true?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1023_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1024_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[The maximum acceptable size is 4.390 inches.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1025_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[The minimum acceptable size is 4.385 inches.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1026_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[The minimum acceptable size is 4.382 inches.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1023_RL">QUE_1024_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1021_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1023_RL">QUE_1025_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1021_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1023_RL">QUE_1026_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1021_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1021_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The part described here has a dimension of 4.387 inches, with a tolerance of +0.005, -0.002. The part could have a dimension of anywhere between 4.385 inches and 4.392 inches.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 5" ident="QUE_1028">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What should be the first step of the procedure in sketching an aircraft wing skin repair?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1029_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1030_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Draw heavy guidelines.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1031_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Lay out the repair.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1032_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Block in the views.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1029_RL">QUE_1030_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1027_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1029_RL">QUE_1031_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1027_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1029_RL">QUE_1032_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1027_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1027_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[In making a sketch of a repair, the first thing to do is to block in the views. As you block in the views, you are able to organize the sketch so it will clearly show the most information.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 6" ident="QUE_1034">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 38.) An aircraft reciprocating engine has a 1,830 cubic-inch displacement and develops 1,250 brake-horsepower at 2,500 RPM. What is the brake mean effective pressure?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1035_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1036_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[217]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1037_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[205]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1038_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[225]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1035_RL">QUE_1036_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1033_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1035_RL">QUE_1037_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1033_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1035_RL">QUE_1038_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1033_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1033_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Find the 1,250-brake-horsepower vertical line at the top of the chart, and follow this line down until it intersects the diagonal line for the 1,830-cubic-inch-displacement engine.
+2. Draw a horizontal line from this intersection point to the right until it intersects the diagonal line for 2,500 RPM.
+3. From the intersection of the horizontal line and the RPM diagonal line, draw a line vertically downward to the BMEP scale.
+4. You will find that the vertical line touches the BMEP scale just about on the 217 psi BMEP line.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 7" ident="QUE_1040">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[A specific measured distance from the datum or some other point identified by the manufacturer, to a point in or on the aircraft is called a]]></mattext>
+          </material>
+          <response_lid ident="QUE_1041_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1042_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[zone number.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1043_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[reference number.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1044_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[station number.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1041_RL">QUE_1042_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1039_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1041_RL">QUE_1043_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1039_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1041_RL">QUE_1044_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1039_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1039_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A station number is a number used to identify the number of inches from the datum or other point identified by the manufacturer to a point in or on the aircraft.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 8" ident="QUE_1046">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 40.) Determine the proper tension for a 3/16-inch cable (7 x 19 extra flex) if the temperature is 87°F.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1047_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1048_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[135 pounds.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1049_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[125 pounds.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1050_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[140 pounds.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1047_RL">QUE_1048_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1045_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1047_RL">QUE_1049_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1045_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1047_RL">QUE_1050_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1045_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1045_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Draw a line vertically upward from a temperature of 87°F until it intersects the curve for 3/16-inch, 7 x 19 cable.
+2. From this point of intersection, draw a line horizontally to the right until it intersects the rigging load in pounds index. This intersection is at 125 pounds.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 9" ident="QUE_1052">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 29.) Identify the left side view of the object shown.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1053_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1054_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1055_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1056_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1053_RL">QUE_1054_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1051_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1053_RL">QUE_1055_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1051_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1053_RL">QUE_1056_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1051_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1051_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[View 3 is the left side. The horizontal surface is shown as a hidden line. View 1 is the right side. We see the horizontal surface as a visible line. View 2 is the bottom view. The vertical surface is shown as a hidden line.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 10" ident="QUE_1058">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which statement is applicable when using a sketch for making a part?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1059_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1060_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[The sketch may be used only if supplemented with three-view orthographic projection drawings.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1061_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[The sketch must show all information to manufacture the part.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1062_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[The sketch need not show all necessary construction details.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1059_RL">QUE_1060_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1057_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1059_RL">QUE_1061_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1057_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1059_RL">QUE_1062_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1057_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1057_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A sketch is a simple, rough drawing made rapidly and without much detail. A sketch is frequently drawn for use in manufacturing a replacement part. Such a sketch must provide all necessary information to those persons who must manufacture the part.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 11" ident="QUE_1064">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[A line used to show an edge which is not visible is a]]></mattext>
+          </material>
+          <response_lid ident="QUE_1065_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1066_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[phantom line.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1067_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[hidden line.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1068_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[break line.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1065_RL">QUE_1066_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1063_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1065_RL">QUE_1067_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1063_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1065_RL">QUE_1068_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1063_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1063_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A phantom line is a light line made up of an alternate long dash and two short dashes. A phantom line shows the location of a part that is used as a reference. A hidden line is a medium-weight dashed line that shows a surface or a part that is not visible from the view in which it appears. A break line is a wavy or a zigzag line used to show that a part has been broken off and only part of it is shown.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 12" ident="QUE_1070">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which of the following statements is true?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1071_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1072_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[According to 14 CFR Part 91, repairs to an aircraft skin should have a detailed dimensional sketch included in the permanent records.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1073_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[On occasion, a mechanic may need to make a simple sketch of a proposed repair to an aircraft, a new design, or a modification.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1074_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Aircraft skin repair documentation must include the mechanic's original detailed dimensional sketch.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1071_RL">QUE_1072_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1069_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1071_RL">QUE_1073_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1069_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1071_RL">QUE_1074_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1069_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1069_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A simple sketch is needed on occasion to help a mechanic make a repair, a new design, or a modification. Part 91 requires that maintenance records contain "a description (or reference to data acceptable to the Administrator) of the work performed..." There is no requirement in Part 91 that a detailed dimensional sketch of a repair become a part of the aircraft's permanent records. ]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 13" ident="QUE_1076">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[The drawings often used in illustrated parts manuals are]]></mattext>
+          </material>
+          <response_lid ident="QUE_1077_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1078_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[exploded-view drawings.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1079_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[block drawings.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1080_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[detail drawings.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1077_RL">QUE_1078_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1075_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1077_RL">QUE_1079_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1075_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1077_RL">QUE_1080_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1075_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1075_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The drawings used in illustrated parts manuals are exploded-view drawings.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 14" ident="QUE_1082">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 32.) What is the next step required for a working sketch of the illustration?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1083_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1084_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Darken the object outlines.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1085_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Sketch extension and dimension lines.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1086_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Add notes, dimensions, title, and date.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1083_RL">QUE_1084_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1081_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1083_RL">QUE_1085_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1081_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1083_RL">QUE_1086_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1081_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1081_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[In the sketch shown here, the part has already been blocked in, details have been added, the visible lines darkened, and the hidden lines added. The next step is to sketch in the extension lines and the dimension lines.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 15" ident="QUE_1088">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 35.) Identify the extension line.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1089_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1090_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1091_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1092_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[4]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1089_RL">QUE_1090_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1087_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1089_RL">QUE_1091_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1087_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1089_RL">QUE_1092_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1087_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1087_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[3 is an extension line used to show the width of the paint stripe. 1 is a visible outline. 2 is a hidden line. 4 is a center line.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 16" ident="QUE_1094">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[In the reading of aircraft blueprints, the term 'tolerance,' used in association with aircraft parts or components,]]></mattext>
+          </material>
+          <response_lid ident="QUE_1095_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1096_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[is the tightest permissible fit for proper construction and operation of mating parts.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1097_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[is the difference between extreme permissible dimensions that a part may have and still be acceptable.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1098_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[represents the limit of galvanic compatibility between different adjoining material types in aircraft parts.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1095_RL">QUE_1096_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1093_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1095_RL">QUE_1097_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1093_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1095_RL">QUE_1098_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1093_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1093_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Tolerance is the difference between the extreme permissible dimensions of a part.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 17" ident="QUE_1100">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[A hydraulic system schematic drawing typically indicates the]]></mattext>
+          </material>
+          <response_lid ident="QUE_1101_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1102_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[specific location of the individual components within the aircraft.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1103_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[direction of fluid flow through the system.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1104_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[amount of pressure in the pressure and return lines, and in system components.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1101_RL">QUE_1102_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1099_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1101_RL">QUE_1103_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1099_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1101_RL">QUE_1104_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1099_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1099_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A schematic drawing of a hydraulic system would not show the specific location of any of the parts in the aircraft, nor the amount of pressure in the pressure and return lines, and in system components. A schematic drawing shows the way all of the components are connected together to form the complete system. It also shows the direction the fluid flows through the system.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 18" ident="QUE_1106">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[A simple way to find the center of a circle on a sketch or drawing, or a circular piece of material is to]]></mattext>
+          </material>
+          <response_lid ident="QUE_1107_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1108_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[draw two non-parallel chord lines across the circle and then a corresponding perpendicular bisector lines across each chord line.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1109_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[draw two parallel chord lines across the circle and then a corresponding perpendicular bisector line across each chord line.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1110_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[draw a single chord line across the circle and then a corresponding perpendicular bisector line across the chord line.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1107_RL">QUE_1108_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1105_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1107_RL">QUE_1109_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1105_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1107_RL">QUE_1110_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1105_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1105_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[An easy way to find the center of a circle on a sketch is to draw two non-parallel chord lines across the circle. Then, draw a perpendicular bisector of each of these chord lines. The bisector lines will cross at the center of the circle.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 19" ident="QUE_1112">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which of the following statements is true?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1113_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1114_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A simple sketch is a description of a single part.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1115_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A detail drawing is a description of an object made up of two or more parts.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1116_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A detail drawing is a description of a single part.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1113_RL">QUE_1114_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1111_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1113_RL">QUE_1115_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1111_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1113_RL">QUE_1116_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1111_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1111_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A detail drawing is a description of a single part that includes enough information to allow the part to be manufactured (fabricated). An assembly drawing is a drawing that shows the way various detail parts are put together to form an assembly or a subassembly. Assembly drawings refer to the various parts to be assembled by the drawing number of their detail drawings. ]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 20" ident="QUE_1118">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 27.) In the isometric view of a typical aileron balance weight, identify the view indicated by the arrow.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1119_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1120_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1121_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1122_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1119_RL">QUE_1120_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1117_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1119_RL">QUE_1121_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1117_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1119_RL">QUE_1122_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1117_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1117_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[View 3 shows the aileron balance weight as seen from the direction shown by the arrow. This view shows the outline of the weight and the outline of the hole. Both of these are drawn as solid lines. The two bolt holes are shown as light dashed lines (hidden lines), and there are also two hidden lines that show the break lines where the radius begins for the tip of the weight.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 21" ident="QUE_1124">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 37.) The vertical distance between the top of the plate and the bottom of the lowest 15/64-inch hole is]]></mattext>
+          </material>
+          <response_lid ident="QUE_1125_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1126_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2.250.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1127_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2.242.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1128_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2.367.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1125_RL">QUE_1126_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1123_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1125_RL">QUE_1127_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1123_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1125_RL">QUE_1128_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1123_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1123_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The distance from the top of the plate to the center of the top hole is 3/8 inch (0.375 inch). The distance between the center of the top hole and the center of the second hole is 7/8 inch (0.875 inch). The distance between the center of the second hole and the center of the third hole is 7/8 inch (0.875 inch). The distance between the center of the third hole and the center of the lowest small hole is 1/8 inch (0.125 inch). The distance from the center of the 15/64-inch hole to its bottom edge is 15/128 inch (0.117 inch). When all of these dimensions are added together, we find the distance from the top of the plate to the bottom of the lower small hole to be 2.367 inches.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 22" ident="QUE_1130">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 34.) What is the dimension of the chamfer?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1131_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1132_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1/16 X 37°.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1133_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[0.3125 + .005 -0.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1134_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[0.0625 X 45°.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1131_RL">QUE_1132_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1129_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1131_RL">QUE_1133_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1129_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1131_RL">QUE_1134_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1129_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1129_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The chamfer is the tapered end of the cylindrical body of this clevis. The drawing shows that the end is chamfered at an angle of 45°, and the chamfer extends back for 1/16 inch. One-sixteenth of an inch is 0.0625 inch.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 23" ident="QUE_1136">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which of the following statements is true?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1137_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1138_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Sketches are usually made with the aid of drafting instruments.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1139_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Sketches are usually more complicated to make when using graph paper.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1140_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Sketches are usually made without the aid of drafting instruments.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1137_RL">QUE_1138_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1135_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1137_RL">QUE_1139_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1135_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1137_RL">QUE_1140_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1135_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1135_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Sketches are simple drawings made without the use of drafting instruments. It is easier to do a sketch on graph paper where dimensions can be visualized without using tools such as a ruler. ]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 24" ident="QUE_1142">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What is used to indicate that a surface must be machine finished?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1143_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1144_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Text.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1145_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Leader lines.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1146_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Finished marks.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1143_RL">QUE_1144_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1141_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1143_RL">QUE_1145_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1141_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1143_RL">QUE_1146_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1141_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1141_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[By using finished marks a drawing identifies those surfaces that must be machine finished.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 25" ident="QUE_1148">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 40.) Determine the proper tension for a 1/8-inch cable (7 x 19) if the temperature is 80°F.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1149_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1150_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[70 pounds.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1151_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[75 pounds.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1152_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[80 pounds.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1149_RL">QUE_1150_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1147_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1149_RL">QUE_1151_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1147_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1149_RL">QUE_1152_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1147_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1147_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Follow the vertical line for a temperature of 80°F upward until it intersects the curve for 1/8-inch, 7 x 19 cable.
+2. From this point of intersection, draw a line horizontally to the right until it intersects the rigging load in pounds index. This intersection is at 70 pounds.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 26" ident="QUE_1154">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 30.) Identify the bottom view of the object.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1155_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1156_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1157_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1158_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1155_RL">QUE_1156_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1153_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1155_RL">QUE_1157_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1153_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1155_RL">QUE_1158_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1153_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1153_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[View 1 is the bottom. The two vertical surfaces are shown as hidden lines. View 2 is the left side. The two horizontal surfaces are shown as hidden lines. View 3 is the top view. The two vertical surfaces are shown as visible lines.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 27" ident="QUE_1160">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[A drawing in which the subassemblies or parts are shown as brought together on the aircraft is called]]></mattext>
+          </material>
+          <response_lid ident="QUE_1161_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1162_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[an assembly drawing.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1163_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[a detail drawing.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1164_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[an installation drawing.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1161_RL">QUE_1162_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1159_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1161_RL">QUE_1163_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1159_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1161_RL">QUE_1164_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1159_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1159_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[An installation drawing is one in which all of the parts and subassemblies are brought together.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 28" ident="QUE_1166">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 39.) Determine the minimum wire size of a single cable in a bundle carrying a continuous current of 20 amperes 10 feet from the bus to the equipment in a 28-volt system with an allowable 1-volt drop.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1167_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1168_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[No. 12.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1169_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[No. 14.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1170_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[No. 16.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1167_RL">QUE_1168_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1165_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1167_RL">QUE_1169_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1165_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1167_RL">QUE_1170_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1165_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1165_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Follow the 20-ampere diagonal line down until it intersects curve 1. This curve limits the wire sizes that can be used in a bundle.
+2. This intersection occurs between the vertical lines for 14-gage and 12-gage wires.
+3. A 12-gage wire is needed to carry a continuous current of 20 amps if the wire is routed in a bundle.
+4. This wire size is chosen on the basis of the heat developed, not on the voltage drop. (If voltage drop were the limiting factor, a 16-gage wire could be used.)]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 29" ident="QUE_1172">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[In a sectional view drawing, what sections illustrate particular parts of an object?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1173_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1174_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Removed.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1175_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Revolved.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1176_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Half.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1173_RL">QUE_1174_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1171_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1173_RL">QUE_1175_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1171_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1173_RL">QUE_1176_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1171_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1171_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A removed section illustrates particular parts of an object. It is similar to revolved sections, except it is placed at one side and, to bring out pertinent details, often drawn to a larger scale than the main view on which it is indicated.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 30" ident="QUE_1178">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 36.) The diameter of the holes in the finished object is]]></mattext>
+          </material>
+          <response_lid ident="QUE_1179_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1180_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3/4 inch.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1181_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[31/64 inch.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1182_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1/2 inch.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1179_RL">QUE_1180_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1177_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1179_RL">QUE_1181_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1177_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1179_RL">QUE_1182_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1177_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1177_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The two holes in this part have a finished diameter of 1/2 inch. They are made by first drilling them to a diameter of 31/64 inch and then reaming them to their final diameter of 1/2 inch. This information is found in note 1.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 31" ident="QUE_1184">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 34.) What is the maximum diameter of the hole for the clevis pin?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1185_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1186_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[0.3175.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1187_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[0.3130.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1188_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[0.31255.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1185_RL">QUE_1186_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1183_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1185_RL">QUE_1187_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1183_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1185_RL">QUE_1188_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1183_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1183_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The hole in this clevis through which the clevis pin fits has a diameter of 0.3125 (+0.005, -0.000) inch. The tolerance (+0.005, -0.000) allows us to make the hole anywhere between 0.3125 and 0.3175 inch in diameter.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 32" ident="QUE_1190">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which of the following statements is true?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1191_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1192_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Schematic diagrams indicate the location of individual components in the aircraft.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1193_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Schematic diagrams show a list of components within the system.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1194_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Schematic diagrams indicate the location of components with respect to each other within the system.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1191_RL">QUE_1192_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1189_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1191_RL">QUE_1193_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1189_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1191_RL">QUE_1194_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1189_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1189_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Schematic diagrams show the location of the components with respect to each other within the system; they do not indicate the location of individual components in the aircraft or list components within the system. ]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 33" ident="QUE_1196">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 41.) Determine the fuel consumption with the engine operating at cruise, 2,350 RPM.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1197_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1198_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[49.2 pounds per hour.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1199_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[51.2 pounds per hour.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1200_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[55.3 pounds per hour.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1197_RL">QUE_1198_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1195_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1197_RL">QUE_1199_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1195_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1197_RL">QUE_1200_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1195_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1195_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Follow the 2,350 RPM vertical line upward until it intersects the propeller load horsepower curve.
+2. From the point of intersection, project a line horizontally to the left to read the brake horsepower that the engine develops at 2,350 RPM. This is 118 brake horsepower.
+3. Follow the 2,350 RPM curve upward until it intersects the propeller load brake specific fuel consumption curve.
+4. From the point of intersection, project a line horizontally to the right to read the specific fuel consumption for 2,350 RPM. This is 0.47 pound of fuel burned per hour for each horsepower developed.
+5. Multiply 118 by 0.47 to get 55.46, the fuel consumption in pounds per hour when it is developing 118 brake horsepower.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 34" ident="QUE_1202">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 31.) What are the proper procedural steps for sketching repairs and alterations?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1203_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1204_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3, 1, 4, and 2.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1205_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[4, 2, 3, and 1.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1206_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1, 3, 4, and 2.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1203_RL">QUE_1204_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1201_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1203_RL">QUE_1205_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1201_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1203_RL">QUE_1206_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1201_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1201_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[An easy way to make a sketch of a repair or alteration is to:
+3 Block in the space and basic shape to be used for the sketch;
+1 Add details to the basic block;
+4 Darken the lines that are to show up as visible lines in the finished sketch; and
+2 Add dimensions and any other information that will make the sketch more usable.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 35" ident="QUE_1208">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 41.) Determine how much fuel would be required for a 30-minute reserve operating at 2,300 RPM.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1209_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1210_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[25.3 pounds.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1211_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[35.5 pounds.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1212_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[49.8 pounds.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1209_RL">QUE_1210_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1207_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1209_RL">QUE_1211_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1207_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1209_RL">QUE_1212_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1207_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1207_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Follow the 2,300 RPM vertical line upward until it intersects the propeller load horsepower curve.
+2. From the point of intersection, project a line horizontally to the left to read the brake horsepower the engine develops at 2,300 RPM. This is 110 brake horsepower.
+3. Follow the 2,300 RPM curve upward until it intersects the propeller load brake specific fuel consumption curve.
+4. From the point of intersection, project a line horizontally to the right to read the specific fuel consumption for 2,300 RPM. This is 0.46 pound of fuel burned per hour for each horsepower developed.
+5. The engine burns 50.6 pounds of fuel per hour when it is developing 110 brake horsepower.
+6. A 30-minute reserve would require one-half of this, or 25.3 pounds.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 36" ident="QUE_1214">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[The measurements showing the ideal or 'perfect' sizes of parts on drawings are called]]></mattext>
+          </material>
+          <response_lid ident="QUE_1215_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1216_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[allowances.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1217_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[dimensions.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1218_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[tolerances.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1215_RL">QUE_1216_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1213_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1215_RL">QUE_1217_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1213_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1215_RL">QUE_1218_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1213_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1213_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Allowances are the difference between the nominal dimension of a part and its upper or lower limit. Dimensions are the measurements used to describe the size of an object. It is the ideal or 'perfect' size of the part. Tolerances are the differences between the extreme allowable dimensions of a part.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 37" ident="QUE_1220">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 28.) Identify the bottom view of the object shown.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1221_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1222_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1223_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[3]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1224_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1221_RL">QUE_1222_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1219_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1221_RL">QUE_1223_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1219_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1221_RL">QUE_1224_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1219_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1219_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[View 2 shows the part as it would be seen looking up at it from the bottom. The vertical lines are hidden. View 1 is not a correct orthographic view of this part. View 3 is not a correct orthographic view of this part.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 38" ident="QUE_1226">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What material symbol is frequently used in drawings to represent all metals?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1227_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1228_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Steel.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1229_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Cast iron.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1230_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Aluminum.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1227_RL">QUE_1228_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1225_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1227_RL">QUE_1229_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1225_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1227_RL">QUE_1230_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1225_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1225_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[If the exact specifications of a material are shown on the drawing, the easily drawn symbol for cast iron is used for the sectioning, and the material specification is listed in the bill of materials or indicated in a note.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 39" ident="QUE_1232">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 34.) What would be the minimum diameter of 4130 round stock required for the construction of the clevis that would produce a machined surface?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1233_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1234_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[55/64 inch.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1235_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1 inch.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1236_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[7/8 inch.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1233_RL">QUE_1234_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1231_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1233_RL">QUE_1235_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1231_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1233_RL">QUE_1236_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1231_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1231_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The maximum diameter of the finished clevis is 7/8 (0.875) inch. To be sure that every part of this maximum diameter is machined, we would need to use a larger bar of material to make it.
+55/64 inch = 0.859375 (this is too small)
+1 inch (this is the correct choice)
+7/8 inch = 0.875 (this is too small)]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 40" ident="QUE_1238">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What is the allowable manufacturing tolerance for a bushing where the outside dimensions shown on the blueprint are: 1.0625 + .0025 -.0003?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1239_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1240_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[.0028.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1241_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1.0650.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1242_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1.0647.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1239_RL">QUE_1240_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1237_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1239_RL">QUE_1241_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1237_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1239_RL">QUE_1242_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1237_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1237_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The bushing described here has an outside dimension of 1.0625 inch with a tolerance of +0.0025 -0.0003. The bushing could have an outside diameter of anywhere between 1.0622 inch and 1.0650 inch. The tolerance for this part is 0.0028 inch.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 41" ident="QUE_1244">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Schematic diagrams are best suited for which of the following?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1245_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1246_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Showing the visual details of individual components in a system.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1247_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Showing the overall location and appearance of components in a system.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1248_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Troubleshooting system malfunctions.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1245_RL">QUE_1246_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1243_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1245_RL">QUE_1247_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1243_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1245_RL">QUE_1248_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1243_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1243_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A schematic diagram shows the relative location of all of the parts in a system, but does not give the location of the parts in the aircraft. Schematic drawings are of great help when troubeshooting a system.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 42" ident="QUE_1250">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[For sketching purposes, almost all objects are composed of one or some combination of six basic shapes; these include the]]></mattext>
+          </material>
+          <response_lid ident="QUE_1251_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1252_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[angle, arc, line, plane, square, and circle.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1253_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[triangle, circle, cube, cylinder, cone, and sphere.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1254_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[triangle, plane, circle, line, square, and sphere.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1251_RL">QUE_1252_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1249_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1251_RL">QUE_1253_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1249_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1251_RL">QUE_1254_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1249_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1249_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Almost all objects are composed of one or some combination of the triangle, circle, cube, cylinder, cone, and sphere.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 43" ident="QUE_1256">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What is the class of working drawing that is the description/depiction of a single part?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1257_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1258_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Installation drawing.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1259_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Assembly drawing.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1260_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Detail drawing.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1257_RL">QUE_1258_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1255_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1257_RL">QUE_1259_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1255_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1257_RL">QUE_1260_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1255_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1255_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A detail drawing is a description of a single part, given in such a manner as to describe by lines, notes, and symbols the specifications as to size, shape, material, and method of manufacture that are to be used in making the part.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 44" ident="QUE_1262">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What type of line is normally used in a drawing or blueprint that indicates invisible edges or contours?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1263_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1264_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Medium-weight short dashes, evenly spaced.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1265_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Medium-weight very short dashes, evenly spaced.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1266_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Thin-weight, one long and two short dashes, evenly spaced.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1263_RL">QUE_1264_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1261_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1263_RL">QUE_1265_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1261_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1263_RL">QUE_1266_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1261_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1261_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A medium-weight dashed line is called a hidden line and is used to show an edge or object not visible to the viewer. A medium solid line is used as a visible outline or object line. Alternate short and long light dashes are used to show a center line.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 45" ident="QUE_1268">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[In order to locate wing and stabilizer frames, what numbering system is used?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1269_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1270_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Dimension numbers.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1271_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Station numbers.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1272_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Scale numbers.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1269_RL">QUE_1270_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1267_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1269_RL">QUE_1271_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1267_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1269_RL">QUE_1272_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1267_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1267_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Locations for fuselage frames in aircraft drawings are identified by station numbers.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 46" ident="QUE_1274">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Sketches are usually made easier by the use of]]></mattext>
+          </material>
+          <response_lid ident="QUE_1275_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1276_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[graph paper.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1277_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[plain white paper.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1278_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[artist's paper.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1275_RL">QUE_1276_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1273_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1275_RL">QUE_1277_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1273_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1275_RL">QUE_1278_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1273_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1273_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Sketches are easily made by using graph paper, which is available, ruled with light lines, in either four or five squares to the inch.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 47" ident="QUE_1280">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 39.) Determine the maximum length of a No. 16 cable to be installed from a bus to the equipment in a 28-volt system with a 25-ampere intermittent load and a 1-volt drop.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1281_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1282_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[8 feet.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1283_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[10 feet.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1284_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[12 feet.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1281_RL">QUE_1282_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1279_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1281_RL">QUE_1283_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1279_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1281_RL">QUE_1284_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1279_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1279_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Draw a diagonal line for 25 amperes midway between and parallel to the 20-ampere and the 30-ampere diagonal lines.
+2. Follow this line down until it intersects the 16-gage vertical line.
+3. This intersection occurs just above curve 3 on the horizontal line for 8 feet of length in the 28-volt (1-volt drop) column.
+4. A No. 16 cable can carry an intermittent load of 25 amperes for 8 feet without exceeding a voltage drop of 1 volt.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 48" ident="QUE_1286">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which of the following statements is true?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1287_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1288_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A measurement should be scaled from an aircraft drawing.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1289_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[When a detail drawing is made, it is carefully and accurately drawn to scale and is dimensioned.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1290_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A detail drawing is not drawn to scale.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1287_RL">QUE_1288_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1285_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1287_RL">QUE_1289_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1285_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1287_RL">QUE_1290_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1285_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1285_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[When a detail drawing is made, it is carefully and accurately drawn to scale and is dimensioned. Measurements should never be scaled from an aircraft drawing because the paper shrinks and stretches. The print is seldom the exact same size as the original drawing. ]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 49" ident="QUE_1292">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 38.) An aircraft reciprocating engine has a 2,800 cubic-inch displacement, develops 2,000 brake-horsepower, and indicates 270 brake mean effective pressure. What is the engine speed (RPM)?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1293_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1294_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2,200.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1295_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2,100.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1296_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[2,300.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1293_RL">QUE_1294_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1291_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1293_RL">QUE_1295_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1291_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1293_RL">QUE_1296_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1291_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1291_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Find the 2,000-brake-horsepower vertical line along the top of the chart.
+2. Follow this line down until it intersects the diagonal line for the 2,800-cubic-inch-displacement engine.
+3. Draw a horizontal line from this intersection to the right of the chart.
+4. Find the 270-BMEP vertical line at the bottom of the chart, and follow this line up until it intersects the horizontal line you just drew.
+5. Find the diagonal line for the RPM that crosses the intersection of the two lines you have just drawn.
+6. An R-2800 engine will need to turn at 2,100 RPM to develop 2,000 brake horsepower when it has a BMEP of 270 psi.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 50" ident="QUE_1298">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What type of diagram shows the wire size required for a particular installation?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1299_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1300_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A block diagram.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1301_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A schematic diagram.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1302_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A wiring diagram.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1299_RL">QUE_1300_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1297_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1299_RL">QUE_1301_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1297_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1299_RL">QUE_1302_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1297_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1297_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[An electrical wiring diagram shows the wire size required for a particular installation.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 51" ident="QUE_1304">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[In what type of electrical diagram are images of components used instead of conventional electrical symbols?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1305_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1306_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A pictorial diagram.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1307_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A schematic diagram.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1308_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[A block diagram.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1305_RL">QUE_1306_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1303_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1305_RL">QUE_1307_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1303_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1305_RL">QUE_1308_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1303_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1303_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[A pictorial diagram is similar to a photograph. It shows an object as it appears to the eye, but is not satisfactory for showing complex forms and shapes.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 52" ident="QUE_1310">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 38.) An aircraft reciprocating engine has a 2,800 cubic-inch displacement and develops 2,000 brake-horsepower at 2,200 RPM. What is the brake mean effective pressure?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1311_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1312_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[257.5.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1313_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[242.5.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1314_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[275.0.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1311_RL">QUE_1312_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1309_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1311_RL">QUE_1313_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1309_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1311_RL">QUE_1314_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1309_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1309_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Find the 2,000-brake-horsepower vertical line at the top of the chart and follow this line down until it intersects the diagonal line for the 2,800-cubic-inch-displacement engine.
+2. Draw a horizontal line from this intersection point to the right until it intersects the diagonal line for 2,200 RPM.
+3. From the intersection of the horizontal line and the RPM diagonal line, draw a line vertically downward to the BMEP scale.
+4. You will find that the vertical line touches the BMEP scale just about on the 257-psi-BMEP line.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 53" ident="QUE_1316">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 39.) Determine the cable size of a 40-foot length of single cable in free air, with a continuous rating, running from a bus to the equipment in a 28-volt system with a 15-ampere load and a 1-volt drop.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1317_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1318_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[No. 10.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1319_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[No. 11.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1320_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[No. 18.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1317_RL">QUE_1318_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1315_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1317_RL">QUE_1319_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1315_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1317_RL">QUE_1320_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1315_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1315_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Follow the 15-ampere diagonal line down until it intersects the horizontal line for 40 feet in the 28-volt column.
+2. This intersection occurs between the vertical lines for 12-gage and 10-gage wire.
+3. You would need a 10-gage wire (always use the larger of the two wires) to carry a 15-amp load for 40 feet and not have more than a 1-volt drop.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 54" ident="QUE_1322">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Zone numbers on aircraft blueprints are used to]]></mattext>
+          </material>
+          <response_lid ident="QUE_1323_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1324_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[locate parts, sections, and views on large drawings.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1325_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[indicate different sections of the aircraft.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1326_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[locate parts in the aircraft.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1323_RL">QUE_1324_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1321_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1323_RL">QUE_1325_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1321_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1323_RL">QUE_1326_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1321_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1321_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Large drawings used for manufacturing aircraft are zoned to make it easy to locate parts, sections, and views on large drawings. Zone identifiers are placed every foot along the edge of the drawing. The identifiers along the bottom of the drawing are numbers and those up the side of the drawing are letters.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 55" ident="QUE_1328">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[Which statement is true regarding an orthographic projection?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1329_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1330_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[There are always at least two views.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1331_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[It could have as many as eight views.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1332_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[One-view, two-view, and three-view drawings are the most common.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1329_RL">QUE_1330_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1327_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1329_RL">QUE_1331_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1327_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1329_RL">QUE_1332_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1327_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1327_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[An orthographic projection can show as many as six views of an object. One-view, two-view, and three-view drawings are the most commonly used types of orthographic projections.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 56" ident="QUE_1334">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 34.) Using the information, what size drill would be required to drill the clevis bolthole?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1335_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1336_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[5/16 inch.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1337_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[21/64 inch.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1338_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[1/2 inch.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1335_RL">QUE_1336_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1333_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1335_RL">QUE_1337_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1333_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1335_RL">QUE_1338_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1333_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1333_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[The drawing shows that the hole for the clevis bolt should have a diameter of 0.3125 (+.005, -0.000). This hole could be drilled with a 5/16 drill. The decimal equivalent of 5/16 inch is 0.3125.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 57" ident="QUE_1340">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[What type of drawing line consists of alternating long and short lines?]]></mattext>
+          </material>
+          <response_lid ident="QUE_1341_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1342_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Dimension.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1343_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Center.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1344_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[Hidden.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1341_RL">QUE_1342_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1339_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1341_RL">QUE_1343_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1339_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1341_RL">QUE_1344_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1339_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1339_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Centerlines are made up of alternate long and short dashes. They indicate the center of an object or part of an object. Where centerlines cross, the short dashes intersect symmetrically. In the case of very small circles, the centerlines may be shown unbroken.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 58" ident="QUE_1346">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[(Refer to Figure 39.) Determine the maximum length of a No. 12 single cable that can be used between a 28-volt bus and a component utilizing 20 amperes continuous load in free air with a maximum acceptable 1-volt drop.]]></mattext>
+          </material>
+          <response_lid ident="QUE_1347_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1348_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[22.5 feet.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1349_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[26.5 feet.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1350_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[12.5 feet.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1347_RL">QUE_1348_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1345_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1347_RL">QUE_1349_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1345_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1347_RL">QUE_1350_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1345_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1345_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[1. Follow the diagonal line for 20 amperes down until it intersects the 12-gage vertical line.
+2. Draw a line horizontally to the left from this point of intersection. This line meets the 1-volt drop column at the 26.5-foot mark.
+3. This point of intersection is above curve 1 showing that the wire can carry this load continuously without producing too much heat.
+4. A 12-gage wire can carry 20 amperes continuously for 26.5 feet without overheating the wire and without producing a voltage drop of more than 1 volt.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item title="Question 59" ident="QUE_1352">
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[One purpose for schematic diagrams is to show the]]></mattext>
+          </material>
+          <response_lid ident="QUE_1353_RL" rcardinality="Single" rtiming="No">
+            <render_choice>
+              <response_label ident="QUE_1354_A1">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[functional location of components within a system.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1355_A2">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[physical location of components within a system.]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="QUE_1356_A3">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[size and shape of components within a system.]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar vartype="Integer" defaultval="0" varname="que_score"/>
+          </outcomes>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1353_RL">QUE_1354_A1</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">1</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1351_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1353_RL">QUE_1355_A2</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1351_ALL"/>
+          </respcondition>
+          <respcondition>
+            <conditionvar>
+              <varequal respident="QUE_1353_RL">QUE_1356_A3</varequal>
+            </conditionvar>
+            <setvar varname="que_score" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUE_1351_ALL"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="QUE_1351_ALL" view="All">
+          <material>
+            <mattext texttype="text/html"><![CDATA[Schematic diagrams are used to show the functional location of components within the system by showing all of the components laid out in the way that they relate to each other in the functioning of the system. Schematic diagrams do not show the physical location of the components within a system, nor do they show the size and shape of the components.]]></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

@@ -1,0 +1,489 @@
+<!--
+Author: by Addison.Crowder on 12/11/2025
+Purpose: Converts ASA question export (.txt and .xml) to D2L question import (.csv)
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ASA2D2L convertion tool</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    * {
+      font-family: inherit;
+    }
+
+    #preview {
+      margin-top: 1em;
+      height: 90vh;
+      overflow-y: scroll;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #cbcbcb;
+      border-radius: 0.5em;
+
+    }
+
+    .question {
+      margin-bottom: 1em;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #d1c5c5;
+      border-radius: 0.5em;
+      background-color: #f1f1f1;
+      padding: 0.5em;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .answer {
+      margin-top: 0.5em;
+    }
+
+    .answer.row>input {
+      width: 2em;
+      margin-right: 1em;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="row">
+    <button id="b_import">Import ASA (.xml|.txt)</button>
+    <button id="b_export">Export D2L (.csv)</button>
+    <button id="b_clear">Clear All</button>
+  </div>
+
+  <div id="preview" class="col"></div>
+  <span id="issue"></span>
+
+  <script>
+
+    /**
+     * @returns {Promise<FileList>}
+     */
+    function uploadFiles() {
+      return new Promise((resolve, reject) => {
+
+        /**@type {HTMLInputElement}*/
+        const i = document.createElement("input")
+        i.style = "display:none"
+        i.type = "file"
+        i.onchange = (evt) => {
+          resolve(i.files)
+        }
+        i.onabort = (evt) => {
+          reject(evt)
+        }
+        document.body.appendChild(i)
+        i.click()
+        document.body.removeChild(i)
+      })
+    }
+
+    /**
+     * @param {string} fname
+     * @param {string} fileType
+     * @param {string} output
+     */
+    function downloadString(fname, fileType, output) {
+      var blob = new Blob([output], { type: fileType });
+      var a = document.createElement('a');
+      a.download = fname;
+      a.href = URL.createObjectURL(blob);
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 500);
+    }
+
+
+    /**
+     * @typedef {{
+     *  id: string
+     *  text: string
+     *  points: string
+     * }} Answer
+     */
+
+    /**
+     * @typedef {{
+     *  title: string
+     *  description: string
+     *  answers: Map<string,Answer>
+     *  isMultiple: boolean
+     *  answerFeedback: string
+     * }} Question
+     */
+
+    /**@param {string} str*/
+    function escCsvStr(str) {
+      return str.replace('"', '""').replace(",", ".").replace("\n", " ")
+    }
+
+    function basename(fname) {
+      let lastIndex = fname.lastIndexOf("/")
+      let potentialLastIndex = fname.lastIndexOf("\\")
+      if (potentialLastIndex > lastIndex) lastIndex = potentialLastIndex
+      return fname.substr(lastIndex + 1)
+    }
+    function stripExtention(fname) {
+      let lastIndex = fname.lastIndexOf(".")
+      if (lastIndex === -1) return fname
+      return fname.substr(0,lastIndex)
+    }
+
+    class Questions {
+      name = "questions"
+      /**@type {Question[]}*/
+      all = []
+
+      /**@type {HTMLElement}*/
+      target = undefined
+
+      /**
+       * @param {File} f
+       */
+      tryImportFile(f) {
+        return new Promise((resolve, reject) => {
+          const fr = new FileReader()
+          fr.onload = async () => {
+            console.log("loaded content")
+            /**@type {string}*/
+            const str = fr.result
+
+            if (str === null || str === undefined) {
+              reject("content string is null")
+              return
+            }
+
+            try {
+              const result = await this.tryImportContent(str)
+              resolve(result)
+            } catch (ex) {
+              reject(ex)
+            }
+          }
+
+          fr.onerror = (evt) => {
+            reject(fr.error)
+          }
+          fr.onabort = (evt) => {
+            reject(evt)
+          }
+          fr.readAsText(f)
+        })
+      }
+
+
+      /**
+       * @param {string} contentString
+       * @returns {"xml"|"txt"|"unknown"}
+       */
+      guessFormat(contentString) {
+        //trim space from beginning first
+        const trimmed = contentString.trimStart()
+
+        //get first char of text
+        const first = trimmed.substring(0, 1)
+
+        // xml begins with <
+        if (first == "<") return "xml"
+        // txt format we expect begins with question index digit
+        if (first.match(/[0-1]/)) return "txt"
+        // not sure otherwise
+        return "unknown"
+      }
+
+      /**@param {string} content*/
+      async tryImportContent(content) {
+        const fmt = this.guessFormat(content)
+        switch (fmt) {
+          case "txt": {
+            const res = this.importText(content)
+            this.updatePreview()
+            return res
+          }
+          case "xml": {
+            const res = this.importXML(content)
+            this.updatePreview()
+            return res
+          }
+          default:
+            throw "unknown format"
+        }
+      }
+
+      /**@param {Answer} answer*/
+      renderAnswer(answer) {
+        const result = document.createElement("div")
+        result.classList.add("answer", "row")
+
+        const answerId = answer.id
+        const vText = document.createElement("input")
+        vText.id = answerId
+        vText.value = answer.points
+        result.appendChild(vText)
+
+
+        const aText = document.createElement("label")
+        aText.for = answerId
+        // aText.popover = answerId
+        aText.textContent = answer.text
+        result.appendChild(aText)
+
+
+        return result
+      }
+
+      /**@param {Question} q*/
+      renderQuestion(q) {
+        const result = document.createElement("div")
+        result.classList.add("question", "col")
+
+        const title = document.createElement("span")
+        title.classList.add("title")
+        title.textContent = q.title
+        result.appendChild(title)
+
+        const description = document.createElement("span")
+        description.classList.add("description")
+        description.textContent = q.description
+        result.appendChild(description)
+
+        const answersDisplay = document.createElement("div")
+        answersDisplay.classList.add("answers", "col")
+        result.appendChild(answersDisplay)
+        for (const [id, answer] of q.answers) {
+          answersDisplay.appendChild(this.renderAnswer(answer))
+        }
+
+        const answerFeedbackDisplay = document.createElement("textarea")
+        answerFeedbackDisplay.classList.add("feedback")
+        answerFeedbackDisplay.value = q.answerFeedback
+        result.appendChild(answerFeedbackDisplay)
+
+        return result
+      }
+
+      updatePreview() {
+        if (!this.target) {
+          console.warn("no target, cannot updatePreview")
+          return
+        }
+        const title = document.createElement("span")
+        title.textContent = this.name
+        this.target.appendChild(title)
+        for (const q of this.all) {
+          const qd = this.renderQuestion(q)
+          this.target.appendChild(qd)
+        }
+      }
+
+      importXML(xmlString) {
+        const p = new DOMParser()
+        /**@type {Document}*/
+        let doc
+        try {
+          doc = p.parseFromString(xmlString, "application/xml")
+        } catch (ex) {
+          throw `failed to parse XML: "${ex}"`
+        }
+
+        const assessment = doc.querySelector("assessment")
+        if (!assessment) {
+          throw `expected at least one <assessment> tag`
+        }
+
+        this.name = assessment.getAttribute("title")
+
+        const questions = assessment.querySelectorAll("item")
+        if (!questions) {
+          throw `expected at least one question (aka <item>)`
+        }
+
+        for (const question of questions) {
+
+          const title = question.getAttribute("title")
+
+          const questionTextField = question.querySelector("presentation > material > mattext")
+          if (!questionTextField) {
+            console.warn("expected presentation > material > mattext from question item:", question)
+            continue
+          }
+          const questionText = questionTextField.textContent
+
+          /**@type {Question}*/
+          const entry = {
+            title: title,
+            description: questionText,
+            answers: new Map()
+          }
+          this.all.push(entry)
+
+          const choiceContainer = question.querySelector("presentation > response_lid > render_choice")
+          if (!choiceContainer) {
+            throw `expected presentation > response_lid > render_choice`
+          }
+          const choices = choiceContainer.querySelectorAll("response_label")
+          if (!choiceContainer) {
+            throw `expected at least one choice in question choices: ${choices}`
+          }
+
+          for (const choice of choices) {
+
+            const choiceTextField = choice.querySelector("material > mattext")
+            if (!choiceTextField) {
+              throw `expected material > mattext on ${choiceTextField}`
+            }
+
+            const choiceText = choiceTextField.textContent
+            const id = choice.getAttribute("ident")
+            entry.answers.set(id, {
+              id,
+              text: choiceText,
+            })
+          }
+
+          const pointsContainer = question.querySelector("resprocessing")
+          if (!pointsContainer) throw `expected points container <resprocessing> for question: ${question}`
+          const points = pointsContainer.querySelectorAll("respcondition")
+          if (!points) throw `expected points entries <respcondition> for points container: ${pointsContainer}`
+
+          for (const point of points) {
+            const idContainer = point.querySelector("conditionvar > varequal")
+            if (!idContainer) throw `expected point id container <varequal> for point: ${point}`
+            const id = idContainer.textContent
+
+            const ans = entry.answers.get(id)
+            if (!ans) console.warn(`no answer for id ${id}, cannot set points`)
+
+            const amountContainer = point.querySelector("setvar")
+            if (!amountContainer) console.warn(`no amount container <setvar> for point: ${point}, cannot set points`)
+
+            ans.points = amountContainer.textContent
+          }
+
+          const feedback = question.querySelector("itemfeedback > material > mattext")
+          if (feedback) {
+            entry.answerFeedback = feedback.textContent
+          }
+        }
+
+      }
+
+      importText(txtString) {
+        throw `text format not implemented yet`
+      }
+
+      exportCSV() {
+        let strs = []
+        let minCellsPerLine = 5
+
+        function line(...cells) {
+          let counter = 1
+          for (let cell of cells) {
+            cell = escCsvStr(cell)
+            cell = `${cell},`
+            strs.push(cell)
+            counter ++
+          }
+
+          if (counter < minCellsPerLine) {
+            for (let i=counter; i<minCellsPerLine; i++) {
+              strs.push(",")
+            }
+          }
+          strs.push("\n")
+        }
+
+        for (const q of this.all) {
+          //multiple choice or multiselect?
+          line("NewQuestion", q.isMultiple ? "MS" : "MC")
+          //line("ID", "") //let d2l generate id
+          line("Title", q.title)
+          line("QuestionText", q.description)
+          line("Points", "1") //TODO - calculate if using multiple select
+          line("Difficulty", "1")
+          //line("Image", "")
+
+          for (const [id, answer] of q.answers) {
+            line("Option", answer.points, answer.text, "")
+          }
+          // line("Hint", "")
+          // line("Feedback", q.answerFeedback)
+        }
+
+        const result = strs.join("")
+
+        let base = basename(q.name)
+        let extless = stripExtention(base)
+
+        let fname = extless + ".csv"
+
+        downloadString(fname, "text/plain", result)
+      }
+    }
+
+    const q = new Questions()
+    q.target = document.querySelector("#preview")
+
+    const sIssue = document.querySelector("#issue")
+    function setIssue(issue) {
+      sIssue.textContent = issue
+    }
+
+    const bImport = document.querySelector("#b_import")
+    bImport.onclick = async () => {
+      console.log("importing")
+      /**@type {FileList}*/
+      let files
+      try {
+        files = await uploadFiles()
+      } catch (ex) {
+        setIssue(`Upload cancelled: "${ex}"`)
+        return
+      }
+
+      if (files === null || files.length < 0) {
+        setIssue(`Upload cancelled: no files selected`)
+        return
+      }
+
+      try {
+        await q.tryImportFile(files.item(0))
+      } catch (ex) {
+        setIssue(`Import failed: ${ex}`)
+        return
+      }
+    }
+    const bExport = document.querySelector("#b_export")
+    bExport.onclick = () => {
+      q.exportCSV()
+    }
+
+    const bClear = document.querySelector("#b_clear")
+    bClear.onclick = () => {
+      q.target.replaceChildren()
+      q.all = []
+    }
+
+  </script>
+
+</body>
+
+</html>

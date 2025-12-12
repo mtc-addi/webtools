@@ -1,0 +1,354 @@
+1- Which of the following terms is/are used to indicate specific measured distances from the datum and/or other points identified by the manufacturer, to points in or on the aircraft?
+A- Zone and station numbers.
+B- Station numbers.
+C- Reference numbers.
+
+
+2- Working drawings may be divided into three classes. They are:
+A- title drawings, installation drawings, and assembly drawings.
+B- detail drawings, assembly drawings, and installation drawings.
+C- detail drawings, orthographic projection drawings, and pictorial drawings.
+
+
+3- (Refer to Figure 33.) Which material section-line symbol indicates cast iron?
+A- 1
+B- 2
+C- 3
+
+
+4- When reading a blueprint, a dimension is given as 4.387 inches +.005 -.002. Which statement is true?
+A- The maximum acceptable size is 4.390 inches.
+B- The minimum acceptable size is 4.385 inches.
+C- The minimum acceptable size is 4.382 inches.
+
+
+5- What should be the first step of the procedure in sketching an aircraft wing skin repair?
+A- Draw heavy guidelines.
+B- Lay out the repair.
+C- Block in the views.
+
+
+6- (Refer to Figure 38.) An aircraft reciprocating engine has a 1,830 cubic-inch displacement and develops 1,250 brake-horsepower at 2,500 RPM. What is the brake mean effective pressure?
+A- 217
+B- 205
+C- 225
+
+
+7- A specific measured distance from the datum or some other point identified by the manufacturer, to a point in or on the aircraft is called a
+A- zone number.
+B- reference number.
+C- station number.
+
+
+8- (Refer to Figure 40.) Determine the proper tension for a 3/16-inch cable (7 x 19 extra flex) if the temperature is 87°F.
+A- 135 pounds.
+B- 125 pounds.
+C- 140 pounds.
+
+
+9- (Refer to Figure 29.) Identify the left side view of the object shown.
+A- 1
+B- 2
+C- 3
+
+
+10- Which statement is applicable when using a sketch for making a part?
+A- The sketch may be used only if supplemented with three-view orthographic projection drawings.
+B- The sketch must show all information to manufacture the part.
+C- The sketch need not show all necessary construction details.
+
+
+11- A line used to show an edge which is not visible is a
+A- phantom line.
+B- hidden line.
+C- break line.
+
+
+12- Which of the following statements is true?
+A- According to 14 CFR Part 91, repairs to an aircraft skin should have a detailed dimensional sketch included in the permanent records.
+B- On occasion, a mechanic may need to make a simple sketch of a proposed repair to an aircraft, a new design, or a modification.
+C- Aircraft skin repair documentation must include the mechanic's original detailed dimensional sketch.
+
+
+13- The drawings often used in illustrated parts manuals are
+A- exploded-view drawings.
+B- block drawings.
+C- detail drawings.
+
+
+14- (Refer to Figure 32.) What is the next step required for a working sketch of the illustration?
+A- Darken the object outlines.
+B- Sketch extension and dimension lines.
+C- Add notes, dimensions, title, and date.
+
+
+15- (Refer to Figure 35.) Identify the extension line.
+A- 3
+B- 1
+C- 4
+
+
+16- In the reading of aircraft blueprints, the term 'tolerance,' used in association with aircraft parts or components,
+A- is the tightest permissible fit for proper construction and operation of mating parts.
+B- is the difference between extreme permissible dimensions that a part may have and still be acceptable.
+C- represents the limit of galvanic compatibility between different adjoining material types in aircraft parts.
+
+
+17- A hydraulic system schematic drawing typically indicates the
+A- specific location of the individual components within the aircraft.
+B- direction of fluid flow through the system.
+C- amount of pressure in the pressure and return lines, and in system components.
+
+
+18- A simple way to find the center of a circle on a sketch or drawing, or a circular piece of material is to
+A- draw two non-parallel chord lines across the circle and then a corresponding perpendicular bisector lines across each chord line.
+B- draw two parallel chord lines across the circle and then a corresponding perpendicular bisector line across each chord line.
+C- draw a single chord line across the circle and then a corresponding perpendicular bisector line across the chord line.
+
+
+19- Which of the following statements is true?
+A- A simple sketch is a description of a single part.
+B- A detail drawing is a description of an object made up of two or more parts.
+C- A detail drawing is a description of a single part.
+
+
+20- (Refer to Figure 27.) In the isometric view of a typical aileron balance weight, identify the view indicated by the arrow.
+A- 1
+B- 3
+C- 2
+
+
+21- (Refer to Figure 37.) The vertical distance between the top of the plate and the bottom of the lowest 15/64-inch hole is
+A- 2.250.
+B- 2.242.
+C- 2.367.
+
+
+22- (Refer to Figure 34.) What is the dimension of the chamfer?
+A- 1/16 X 37°.
+B- 0.3125 + .005 -0.
+C- 0.0625 X 45°.
+
+
+23- Which of the following statements is true?
+A- Sketches are usually made with the aid of drafting instruments.
+B- Sketches are usually more complicated to make when using graph paper.
+C- Sketches are usually made without the aid of drafting instruments.
+
+
+24- What is used to indicate that a surface must be machine finished?
+A- Text.
+B- Leader lines.
+C- Finished marks.
+
+
+25- (Refer to Figure 40.) Determine the proper tension for a 1/8-inch cable (7 x 19) if the temperature is 80°F.
+A- 70 pounds.
+B- 75 pounds.
+C- 80 pounds.
+
+
+26- (Refer to Figure 30.) Identify the bottom view of the object.
+A- 1
+B- 2
+C- 3
+
+
+27- A drawing in which the subassemblies or parts are shown as brought together on the aircraft is called
+A- an assembly drawing.
+B- a detail drawing.
+C- an installation drawing.
+
+
+28- (Refer to Figure 39.) Determine the minimum wire size of a single cable in a bundle carrying a continuous current of 20 amperes 10 feet from the bus to the equipment in a 28-volt system with an allowable 1-volt drop.
+A- No. 12.
+B- No. 14.
+C- No. 16.
+
+
+29- In a sectional view drawing, what sections illustrate particular parts of an object?
+A- Removed.
+B- Revolved.
+C- Half.
+
+
+30- (Refer to Figure 36.) The diameter of the holes in the finished object is
+A- 3/4 inch.
+B- 31/64 inch.
+C- 1/2 inch.
+
+
+31- (Refer to Figure 34.) What is the maximum diameter of the hole for the clevis pin?
+A- 0.3175.
+B- 0.3130.
+C- 0.31255.
+
+
+32- Which of the following statements is true?
+A- Schematic diagrams indicate the location of individual components in the aircraft.
+B- Schematic diagrams show a list of components within the system.
+C- Schematic diagrams indicate the location of components with respect to each other within the system.
+
+
+33- (Refer to Figure 41.) Determine the fuel consumption with the engine operating at cruise, 2,350 RPM.
+A- 49.2 pounds per hour.
+B- 51.2 pounds per hour.
+C- 55.3 pounds per hour.
+
+
+34- (Refer to Figure 31.) What are the proper procedural steps for sketching repairs and alterations?
+A- 3, 1, 4, and 2.
+B- 4, 2, 3, and 1.
+C- 1, 3, 4, and 2.
+
+
+35- (Refer to Figure 41.) Determine how much fuel would be required for a 30-minute reserve operating at 2,300 RPM.
+A- 25.3 pounds.
+B- 35.5 pounds.
+C- 49.8 pounds.
+
+
+36- The measurements showing the ideal or 'perfect' sizes of parts on drawings are called
+A- allowances.
+B- dimensions.
+C- tolerances.
+
+
+37- (Refer to Figure 28.) Identify the bottom view of the object shown.
+A- 2
+B- 3
+C- 1
+
+
+38- What material symbol is frequently used in drawings to represent all metals?
+A- Steel.
+B- Cast iron.
+C- Aluminum.
+
+
+39- (Refer to Figure 34.) What would be the minimum diameter of 4130 round stock required for the construction of the clevis that would produce a machined surface?
+A- 55/64 inch.
+B- 1 inch.
+C- 7/8 inch.
+
+
+40- What is the allowable manufacturing tolerance for a bushing where the outside dimensions shown on the blueprint are: 1.0625 + .0025 -.0003?
+A- .0028.
+B- 1.0650.
+C- 1.0647.
+
+
+41- Schematic diagrams are best suited for which of the following?
+A- Showing the visual details of individual components in a system.
+B- Showing the overall location and appearance of components in a system.
+C- Troubleshooting system malfunctions.
+
+
+42- For sketching purposes, almost all objects are composed of one or some combination of six basic shapes; these include the
+A- angle, arc, line, plane, square, and circle.
+B- triangle, circle, cube, cylinder, cone, and sphere.
+C- triangle, plane, circle, line, square, and sphere.
+
+
+43- What is the class of working drawing that is the description/depiction of a single part?
+A- Installation drawing.
+B- Assembly drawing.
+C- Detail drawing.
+
+
+44- What type of line is normally used in a drawing or blueprint that indicates invisible edges or contours?
+A- Medium-weight short dashes, evenly spaced.
+B- Medium-weight very short dashes, evenly spaced.
+C- Thin-weight, one long and two short dashes, evenly spaced.
+
+
+45- In order to locate wing and stabilizer frames, what numbering system is used?
+A- Dimension numbers.
+B- Station numbers.
+C- Scale numbers.
+
+
+46- Sketches are usually made easier by the use of
+A- graph paper.
+B- plain white paper.
+C- artist's paper.
+
+
+47- (Refer to Figure 39.) Determine the maximum length of a No. 16 cable to be installed from a bus to the equipment in a 28-volt system with a 25-ampere intermittent load and a 1-volt drop.
+A- 8 feet.
+B- 10 feet.
+C- 12 feet.
+
+
+48- Which of the following statements is true?
+A- A measurement should be scaled from an aircraft drawing.
+B- When a detail drawing is made, it is carefully and accurately drawn to scale and is dimensioned.
+C- A detail drawing is not drawn to scale.
+
+
+49- (Refer to Figure 38.) An aircraft reciprocating engine has a 2,800 cubic-inch displacement, develops 2,000 brake-horsepower, and indicates 270 brake mean effective pressure. What is the engine speed (RPM)?
+A- 2,200.
+B- 2,100.
+C- 2,300.
+
+
+50- What type of diagram shows the wire size required for a particular installation?
+A- A block diagram.
+B- A schematic diagram.
+C- A wiring diagram.
+
+
+51- In what type of electrical diagram are images of components used instead of conventional electrical symbols?
+A- A pictorial diagram.
+B- A schematic diagram.
+C- A block diagram.
+
+
+52- (Refer to Figure 38.) An aircraft reciprocating engine has a 2,800 cubic-inch displacement and develops 2,000 brake-horsepower at 2,200 RPM. What is the brake mean effective pressure?
+A- 257.5.
+B- 242.5.
+C- 275.0.
+
+
+53- (Refer to Figure 39.) Determine the cable size of a 40-foot length of single cable in free air, with a continuous rating, running from a bus to the equipment in a 28-volt system with a 15-ampere load and a 1-volt drop.
+A- No. 10.
+B- No. 11.
+C- No. 18.
+
+
+54- Zone numbers on aircraft blueprints are used to
+A- locate parts, sections, and views on large drawings.
+B- indicate different sections of the aircraft.
+C- locate parts in the aircraft.
+
+
+55- Which statement is true regarding an orthographic projection?
+A- There are always at least two views.
+B- It could have as many as eight views.
+C- One-view, two-view, and three-view drawings are the most common.
+
+
+56- (Refer to Figure 34.) Using the information, what size drill would be required to drill the clevis bolthole?
+A- 5/16 inch.
+B- 21/64 inch.
+C- 1/2 inch.
+
+
+57- What type of drawing line consists of alternating long and short lines?
+A- Dimension.
+B- Center.
+C- Hidden.
+
+
+58- (Refer to Figure 39.) Determine the maximum length of a No. 12 single cable that can be used between a 28-volt bus and a component utilizing 20 amperes continuous load in free air with a maximum acceptable 1-volt drop.
+A- 22.5 feet.
+B- 26.5 feet.
+C- 12.5 feet.
+
+
+59- One purpose for schematic diagrams is to show the
+A- functional location of components within a system.
+B- physical location of components within a system.
+C- size and shape of components within a system.
+
+
