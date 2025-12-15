@@ -132,7 +132,13 @@ Purpose: Converts ASA question export (.txt and .xml) to D2L question import (.c
 
     /**@param {string} str*/
     function escCsvStr(str) {
-      return str.replace('"', '""').replace(",", ".").replace("\n", " ")
+      return str
+      .replace(/\"/g, "\"\"")
+      .replace(/\n/g, "<br>")
+      // .replace(/\n/g, "\\n")
+      // .replace(/\r/g, "\\r")
+      // .replace(/\n/g, " ")
+      // .replace(/\r/g, " ")
     }
 
     function basename(fname) {
@@ -394,18 +400,24 @@ Purpose: Converts ASA question export (.txt and .xml) to D2L question import (.c
         let strs = []
         let minCellsPerLine = 5
 
+        /**@param {string[]} cells*/
         function line(...cells) {
           let counter = 1
           for (let cell of cells) {
             cell = escCsvStr(cell)
-            cell = `${cell},`
+            cell = `"${cell}",`
+            
+            if (cell.includes("\n") || cell.includes("\r")) {
+              console.log("HAS NEW LINE AFTER REMOVAL", cell)
+            }
+
             strs.push(cell)
             counter ++
           }
 
           if (counter < minCellsPerLine) {
             for (let i=counter; i<minCellsPerLine; i++) {
-              strs.push(",")
+              strs.push(`"",`)
             }
           }
           strs.push("\n")
@@ -416,13 +428,16 @@ Purpose: Converts ASA question export (.txt and .xml) to D2L question import (.c
           line("NewQuestion", q.isMultiple ? "MS" : "MC")
           //line("ID", "") //let d2l generate id
           line("Title", q.title)
-          line("QuestionText", q.description)
+          
+          console.log("QuestionText", q.description, escCsvStr(q.description))
+          
+          line("QuestionText", `<p>${q.description}</p>`, "HTML")
           line("Points", "1") //TODO - calculate if using multiple select
           line("Difficulty", "1")
           //line("Image", "")
 
           for (const [id, answer] of q.answers) {
-            line("Option", answer.points, answer.text, "")
+            line("Option", answer.points, `<p>${answer.text}</p>`, "HTML")
           }
           // line("Hint", "")
           // line("Feedback", q.answerFeedback)
