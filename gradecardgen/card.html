@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 8pt;
+    }
+
+    * {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .cards {
+      flex: 1;
+      max-height: 95vh;
+      overflow-y: scroll;
+    }
+
+    #grid_a,
+    #grid_b {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background-color: black;
+      gap: 1px;
+      padding: 1px;
+    }
+
+    #grid_b {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    #grid_a_a {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      background-color: black;
+      gap: 1px;
+    }
+
+    #grid_b_a {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      background-color: black;
+      gap: 1px;
+    }
+
+    #grid_b_b {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background-color: black;
+      gap: 1px;
+    }
+
+    #grid_c {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      background-color: black;
+      gap: 1px;
+      padding: 1px;
+    }
+
+    .subgrid {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+    }
+
+    .makeup_grids {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+      grid-column: 2 / -1;
+    }
+
+    #grid_d {
+      display: grid;
+      grid-template-columns: auto repeat(15, 1fr) 2fr repeat(16, 1fr) 2fr 2fr 2fr auto 2fr;
+      grid-template-rows: 1fr 1fr 1fr 6fr;
+      background-color: black;
+      gap: 1px;
+      padding: 1px;
+    }
+
+    input {
+      border: none;
+      text-align: center;
+      min-width: 0;
+    }
+
+    span {
+      background-color: white;
+      text-align: center;
+    }
+
+    label {
+      background-color: #bbbbbb;
+      text-align: center;
+      align-content: center;
+      font-weight: bold;
+    }
+
+    .upright {
+      writing-mode: sideways-lr;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form {
+      flex: 0.3;
+      /* width: 45vw; */
+    }
+
+    #student_names>input {
+      border-style: solid;
+      border-width: 1px;
+      border-color: black;
+    }
+
+    .row>input {
+      border-style: solid;
+      border-width: 1px;
+      border-color: black;
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <div class="form col">
+      <button id="generate">Generate</button>
+      <div class="row">
+        <div>
+          <label for="student_names">Student Names ('Enter' to add fields, 'Backspace' to remove)</label>
+          <div id="student_names" style="display: flex; flex-direction: column;">
+            <input></input>
+          </div>
+        </div>
+        <div class="col">
+
+          <div class="row">
+            <label for="class_code_input">Class Code:</label>
+            <input id="class_code_input" />
+          </div>
+          <div class="row">
+            <label for="subject_code_input">Subject Code:</label>
+            <input id="subject_code_input" />
+          </div>
+          <div class="row">
+            <label for="subject_description_input">Subject Description:</label>
+            <input id="subject_description_input" />
+          </div>
+
+          <div class="row">
+            <label for="dates_start_input">Class Start Date:</label>
+            <input id="dates_start_input" type="date" />
+          </div>
+          <div class="row">
+            <label for="dates_end_input">Class End Date:</label>
+            <input id="dates_end_input" type="date" />
+          </div>
+
+          <div class="row">
+            <label for="subject_hours_input">Subject Hours:</label>
+            <input id="subject_hours_input" />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cards">
+    </div>
+
+    <div class="card" style="display:none;">
+      <div id="grid_a">
+        <input id="student_name_input" value="" />
+
+        <div id="grid_a_a">
+          <input id="subject_code_input" value="" />
+          <span>/</span>
+          <input id="class_code_input" value="" />
+        </div>
+
+        <input id="subject_description_input" value="" />
+        <input id="subject_hours_input" value="" />
+
+        <label for="student_name_input">Name</label>
+        <label for="subject_code_input">Subject Code / Class Code</label>
+        <label for="subject_description_input">Subject Description</label>
+        <label for="subject_hours_input">Subject Hours</label>
+      </div>
+      <br />
+
+      <div id="grid_b">
+        <div id="remarks_group" class="subgrid" style="grid-row: 1 / -1; grid-column: 1/3;">
+          <label for="remarks" style="grid-row:1/3; grid-column: 1/-1;">Remarks - Achievement</label>
+          <textarea id="remarks" style="grid-column: 1/-1;"
+            value="Student has not completed all assignments."></textarea>
+        </div>
+
+        <div id="dates_group" class="subgrid" style="grid-row: 1 / -1; grid-column: 3/5;">
+          <label style="grid-column: 1 / span 2;">Dates</label>
+          <label for="dates_start_input">Start</label>
+          <label for="dates_end_input">End</label>
+
+          <input id="dates_start_input" />
+          <input id="dates_end_input" />
+        </div>
+
+        <div class="subgrid" style="grid-row: 1 / -1;">
+          <label for="hours.attended" style="grid-row: 1/3;">Hours Attended</label>
+          <input id="hours.attended" value="0" />
+        </div>
+
+        <div class="subgrid" style="grid-row: 1 / -1;">
+          <label for="hours.pending" style="grid-row: 1/3;">Hours Pending</label>
+          <input id="hours.pending" value="0" />
+        </div>
+
+        <div class="subgrid" style="grid-row: 1 / -1;">
+          <label for="hours.madeup" style="grid-row: 1/3;">Hours Made Up</label>
+          <input id="hours.madeup" value="0" />
+        </div>
+
+        <div class="subgrid" style="grid-row: 1 / -1;">
+          <label for="hours.short" style="grid-row: 1/3;">Hours Short</label>
+          <input id="hours.short" value="0" />
+        </div>
+      </div>
+      <br />
+
+      <div id="grid_c">
+        <span style="grid-column: 1 / span 14;">Make-Up Time</span>
+
+        <label style="grid-column: 1;">Time Short</label>
+
+
+        <div id="time.short.grid" class="makeup_grids">
+
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+        </div>
+        <label style="grid-column: 1;">Date Made Up</label>
+        <div id="date.madeup.grid" class="makeup_grids">
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+        </div>
+
+        <label style="grid-column: 1;">Hours Made Up</label>
+        <div id="hours.madeup.grid" class="makeup_grids">
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+        </div>
+
+        <label style="grid-column: 1;">Instructor's Initials</label>
+        <div id="instructor.initials.grid" class="makeup_grids">
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+          <input></input>
+        </div>
+
+      </div>
+
+      <br />
+
+      <div id="grid_d">
+        <div id="grid_d_a" class="subgrid" style="grid-column: 1/18;grid-row:1/-1;">
+          <label style="grid-column: 1/-1;">Shop Scores</label>
+          <div id="grid_d_a_a" class="subgrid" style="grid-column: 1/17;grid-row:2/5;">
+            <label>Actual</label>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+
+            <label>Possible</label>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+
+            <label class="upright"></label>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+          </div>
+          <input id="shop.average" value="0" style="grid-row: 2/4;"></input>
+          <label for="shop.average" class="upright">Shop Average</label>
+        </div>
+        <div id="grid_d_b" class="subgrid" style="grid-column: 18/-1;grid-row:1/-1;">
+          <label style="grid-column: 1/-1;">Theory Scores</label>
+          <div id="grid_d_a_a" class="subgrid" style="grid-column: 1/17;grid-row:2/5;">
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+            <input></input>
+
+
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+            <input class="upright"></input>
+          </div>
+          <div id="grid_d_a_b" class="subgrid" style="grid-column: 17/20;grid-row:2/5;">
+
+            <input id="theory.average" value="0" style="grid-row: 1/3;"></input>
+            <input id="st.average" value="0" style="grid-row: 1/3;"></input>
+            <input id="subject.average" value="" style="grid-row: 1/3;"></input>
+
+            <label for="theory.average" class="upright">Theory Average</label>
+            <label for="st.average" class="upright">Shop+Theory (S/T)<br />Average</label>
+            <label for="subject.average" class="upright">Subject Test</label>
+          </div>
+          <label class="upright" style="grid-row: 2/5;">Average S/T And Subject</br>Test for Final Grade</label>
+          <div id="grid_d_a_c" class="subgrid" style="grid-row:2/5;">
+            <input class="upright" id="final.grade" value="I" style="grid-row: 1/3;height:4em;color:red;"></input>
+            <label for="final.grade" class="upright">Final Grade</label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script>
+      const form = document.querySelector(".form")
+      
+      const student_names = document.querySelector("#student_names")
+      student_names.addEventListener("keyup", (evt) => {
+        const key = evt.key.toLowerCase()
+
+        /**@type {HTMLInputElement}*/
+        const target = evt.target
+
+        switch (key) {
+          case "backspace":
+            const p = target.parentElement
+
+            //if removing this input would leave no inputs, skip
+            if (p.childElementCount < 2) return
+
+            //if target is empty, delete input
+            if (target.value.trim().length > 1) return
+
+            //remove this input
+            target.remove()
+
+            //focus last input
+            p.lastElementChild.focus()
+
+            break;
+          case "enter":
+            //if target is empty, skip
+            if (target.value.trim().length < 1) return
+
+            /**@type {HTMLInputELement}*/
+            const last = target.parentNode.lastElementChild
+
+            //if we're not talking about the last input, skip
+            if (target !== last) {
+              last.focus()
+              return
+            }
+
+            //clone the input
+            /**@type {HTMLInputElement}*/
+            const n = target.cloneNode()
+
+            //reset value of clone
+            n.value = ""
+
+            //append to parent
+            target.parentElement.appendChild(n)
+
+            //focus the new input
+            n.focus()
+            break;
+        }
+
+      })
+
+      const cards = document.querySelector(".cards")
+
+      const card = document.querySelector(".card")
+
+
+      const class_code = document.querySelector("#class_code_input")
+      const subject_code = document.querySelector("#subject_code_input")
+      const subject_description = document.querySelector("#subject_description_input")
+      const subject_hours_input = document.querySelector("#subject_hours_input")
+      const dates_start_input = document.querySelector("#dates_start_input")
+            const dates_end_input = document.querySelector("#dates_end_input")
+
+
+      function getStudentNames() {
+        const results = []
+        for (const ch of student_names.children) {
+          /**@type {HTMLInputElement}*/
+          const ich = ch
+          const v = ich.value.trim()
+          if (v.length < 1) break
+          results.push(v)
+        }
+        return results
+      }
+
+      const generate = document.querySelector("#generate")
+      generate.addEventListener("click", () => {
+        const names = getStudentNames()
+        if (names.length < 1) return
+
+        cards.replaceChildren()
+
+        for (const name of names) {
+          /**@type {HTMLDivElement}*/
+          const n = card.cloneNode(true)
+          n.style.display = "unset"
+
+          n.querySelector("#student_name_input").value = name
+          n.querySelector("#subject_code_input").value = subject_code.value
+          n.querySelector("#class_code_input").value = class_code.value
+          n.querySelector("#subject_description_input").value = subject_description.value
+          n.querySelector("#subject_hours_input").value = subject_hours_input.value
+          n.querySelector("#dates_start_input").value = dates_start_input.value
+          n.querySelector("#dates_end_input").value = dates_end_input.value
+
+          cards.appendChild(n)
+        }
+
+      })
+
+    </script>
+
+
+  </div>
+
+</body>
+
+</html>
